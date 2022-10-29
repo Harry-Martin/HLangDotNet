@@ -20,11 +20,11 @@ namespace HLang
                     // if lexer generates illegal token, display error message
                     if (token.Type == TokenType.IllegalToken)
                     {
-                        Console.WriteLine($"Illegal Token {token.Lexeme} at ({token.LineNumber}:{token.CharacterNumber})");
+                        Console.WriteLine($"Illegal Token '{token.Lexeme}' at ({token.LineNumber}:{token.CharacterNumber})");
                         break;
                     }
 
-                    Console.WriteLine(token.ToString());
+                    Console.WriteLine(token);
 
                     // when lexer reaches end of file, stop lexing line
                     if (token.Type == TokenType.EOFToken)
